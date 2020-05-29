@@ -7,7 +7,7 @@ export default class List extends React.Component {
   render() {
     return (
       <div className='App'>
-        <h1>aaaa</h1>
+        <h1>list页面</h1>
       </div>
     );
   }

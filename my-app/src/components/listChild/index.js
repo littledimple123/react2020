@@ -5,7 +5,7 @@ export default class ListChild extends React.Component {
     this.handleParent = this.handleParent.bind(this);
   }
   handleParent () {
-    this.props.clickParent('子传父')
+    this.props.clickParent('bbb')
   }
   render() {
     return (
