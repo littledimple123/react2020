@@ -35,6 +35,13 @@
     ]
   },
   "devDependencies": {
+    "qs": "^6.9.4",
     "react-router-dom": "^5.2.0"
+  },
+  "proxy": {
+    "/app": {
+      "target": "真实请求的url地址",
+      "changeOrign": true
+    }
   }
 }
