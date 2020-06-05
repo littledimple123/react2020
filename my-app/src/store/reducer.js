@@ -1,8 +1,14 @@
 // 相当于管理员
+import { UAERNAME} from './actionCreator'
 const defaultState = {
-  count: 1,
-  str:'这是reduce里面的一条数据'
+  name:''
 }
 export default (state = defaultState, action) => {
+  // console.log(action)
+  if (action.type === 'UAERNAME') {
+    const newState = JSON.parse(JSON.stringify(state));
+    newState.name = action.text;
+    return newState;
+  }
   return state
 };

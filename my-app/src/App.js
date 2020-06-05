@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'antd';
+import store from './store/index'
 import './App.css';
 
 export default class App extends React.Component {
@@ -15,6 +16,7 @@ export default class App extends React.Component {
     });
   }
   tolist () {
+    console.log(store.getState())
     this.props.history.push({
       pathname:'/list/index'
     })
