@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import store from '../store/index'
 import ListChild from '../components/listChild/index';
 import StatusOne from '../components/statusOne/index';
 export default class Detail extends React.Component {
@@ -17,6 +18,8 @@ export default class Detail extends React.Component {
   }
   componentDidMount() {
     // console.log(this.props.location.state)
+    const obj = store.getState()
+    console.log(obj)
   }
   handlerClick() {
     this.props.history.push({
@@ -50,7 +53,7 @@ export default class Detail extends React.Component {
           str={this.state.str}
           clickParent={this.handleParent}
         ></ListChild>
-        <div>子组件传过来的值：{this.state.child}</div>
+        <div>我是父组件，这是子组件传过来的值：{this.state.child}</div>
         <h1>
           -----------------------------------------状态提升------------------------------------------
         </h1>

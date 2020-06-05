@@ -10,7 +10,7 @@ export default class ListChild extends React.Component {
   render() {
     return (
       <div>
-        父组件向子组件传的值是：{this.props.str}
+        我是子组件，向父组件传的值是：{this.props.str}
         <button onClick={this.handleParent}>向父组件传值</button>
       </div>
     );
