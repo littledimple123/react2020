@@ -7,7 +7,7 @@ export default class StatusOne extends React.Component {
     return (
       <div>
         父组件分发状态：
-        {this.props.value +1}
+        {Number(this.props.value)/2}
       </div>
     );
   }

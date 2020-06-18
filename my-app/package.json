@@ -39,7 +39,8 @@
   "devDependencies": {
     "qs": "^6.9.4",
     "react-router-dom": "^5.2.0",
-    "redux-devtools": "^3.5.0"
+    "redux-devtools": "^3.5.0",
+    "redux-persist": "^6.0.0"
   },
   "proxy": "http://www.baidu.com"
 }
