@@ -11,14 +11,15 @@ export default class List extends React.Component {
     };
     this.changebtn = this.changebtn.bind(this);
     this.getinfo = this.getinfo.bind(this)
+    this.tomenu = this.tomenu.bind(this);
   }
   componentDidMount () {
-    console.log(store.getState());
+    // console.log(store.getState());
   }
   changebtn() {
     const ADD = uaername('触发名字改变');
     store.dispatch(ADD);
-    console.log(store.getState());
+    // console.log(store.getState());
     this.setState({
       info: store.getState(),
     });
@@ -30,10 +31,15 @@ export default class List extends React.Component {
     };
     const infos = setVisibilityFilter(cparams);
     store.dispatch(infos);
-    console.log(store.getState());
+    // console.log(store.getState());
     this.setState({
       info:store.getState()
     })
+  }
+  tomenu () {
+    this.props.history.push({
+      pathname: '/menuPage/index',
+    });
   }
   render() {
     return (
@@ -46,6 +52,7 @@ export default class List extends React.Component {
           {this.state.info.userid}
         </h2>
         <Button onClick={this.getinfo}>获取用户信息</Button>
+        <Button onClick={this.tomenu}>跳转menuPage</Button>
       </div>
     );
   }
